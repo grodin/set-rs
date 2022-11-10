@@ -37,7 +37,7 @@ pub struct Card {
 }
 
 impl Card {
-    fn all() -> Vec<Card> {
+    pub(crate) fn all() -> Vec<Card> {
         let mut all_cards = Vec::with_capacity(81);
         for colour in all::<Colour>() {
             for shading in all::<Shading>() {
