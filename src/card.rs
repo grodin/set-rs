@@ -81,7 +81,8 @@ mod tests {
     #[test]
     fn all_gives_distinct_cards() {
         let all_cards = Card::all();
-        let set_of_cards: HashSet<Card> = HashSet::from_iter(all_cards.into_iter());
+        let set_of_cards: HashSet<&Card> = HashSet::from_iter(all_cards.iter());
+        assert_eq!(set_of_cards.len(), all_cards.len());
         assert_eq!(set_of_cards.len(), 81);
     }
 }
