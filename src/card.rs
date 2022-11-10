@@ -55,6 +55,22 @@ impl Card {
         }
         all_cards
     }
+
+    pub fn colour(&self) -> &Colour {
+        &self.colour
+    }
+
+    pub fn shape(&self) -> &Shape {
+        &self.shape
+    }
+
+    pub fn shading(&self) -> &Shading {
+        &self.shading
+    }
+
+    pub fn number(&self) -> &Number {
+        &self.number
+    }
 }
 
 #[cfg(test)]
